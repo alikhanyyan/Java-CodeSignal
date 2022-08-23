@@ -1,0 +1,13 @@
+String[] solution(String[] inputArray) 
+{
+    int length = inputArray[0].length();
+    for(int i = 1; i < inputArray.length; i++)
+        if (inputArray[i].length() > length)
+            length = inputArray[i].length(); 
+    ArrayList<String> longest = new ArrayList<String> ();
+    for(int i = 0; i < inputArray.length; i++)
+        if (inputArray[i].length() == length)
+            longest.add(inputArray[i]);
+    String[] answer = longest.toArray(new String[0]);
+    return answer;
+}
