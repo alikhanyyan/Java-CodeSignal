@@ -1,0 +1,13 @@
+int[] solution(int[] a) 
+{
+    ArrayList<Integer> aCopy = new ArrayList<Integer> ();
+    for (int x : a)
+        if (x != -1)
+            aCopy.add(x);
+    Collections.sort(aCopy);
+    int k = -1;
+    for(int i = 0; i < a.length; i++)
+        if (a[i] != - 1)
+            a[i] = aCopy.get(++k);
+    return a;
+}
