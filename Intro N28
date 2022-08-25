@@ -1,1 +1,10 @@
-
+String solution(String inputString) 
+{
+    char[] answer = inputString.toCharArray();
+    for(int i = 0; i < answer.length; i++)
+        if (answer[i] != 'z')
+            answer[i]++;
+        else
+            answer[i] = 'a';
+    return new String(answer);
+}
