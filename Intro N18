@@ -1,0 +1,10 @@
+boolean solution(String inputString) 
+{
+    Set<Character> chars = new HashSet<Character>();   
+    for (int i = 0; i < inputString.length(); i++) 
+        if (chars.contains(inputString.charAt(i)))
+            chars.remove(inputString.charAt(i));
+        else
+            chars.add(inputString.charAt(i));
+    return chars.size() <= 1;
+}
