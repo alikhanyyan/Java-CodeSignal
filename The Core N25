@@ -1,0 +1,7 @@
+int solution(int n) 
+{
+    int k = 1, m = 2;
+    while(k < n)
+        k *= m++;
+    return k;
+}
