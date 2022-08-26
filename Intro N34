@@ -1,0 +1,9 @@
+int[] solution(int[] inputArray, int k) 
+{
+    int[] answer = new int[inputArray.length - inputArray.length / k];
+    int j = -1;
+    for (int i = 0; i < inputArray.length; i++)
+        if ((i + 1) % k != 0)
+            answer[++j] = inputArray[i];
+    return answer;
+}
