@@ -1,0 +1,10 @@
+boolean solution(String inputString) 
+{
+    String[] numbers = inputString.split("[.]");
+    if (numbers.length != 4)
+        return false;
+    for (String string : numbers)
+        if (string.isEmpty() || !string.matches("[0-9]{1,3}") || (string.length() > 1 && string.charAt(0) == '0') || !(Integer.parseInt(string) >= 0 && Integer.parseInt(string) <= 255))
+            return false;
+    return true;
+}
