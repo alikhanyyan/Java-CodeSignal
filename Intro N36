@@ -1,0 +1,7 @@
+int solution(String s) 
+{
+    Set str = new HashSet();
+    for (char x : s.toCharArray()) 
+        str.add(x);
+    return str.size();
+}
