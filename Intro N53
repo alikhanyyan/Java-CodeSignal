@@ -1,0 +1,5 @@
+boolean solution(String time) 
+{
+    String[] digit = time.split(":");
+    return Integer.valueOf(digit[0]) < 24 && Integer.valueOf(digit[1]) < 60;
+}
