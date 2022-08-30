@@ -1,0 +1,15 @@
+boolean solution(String inputString) 
+{
+    String[] array = inputString.split("-");
+    if (inputString.length() != 17 || array.length != 6)
+        return false;
+    for (String str : array)
+    {
+        if (str.length() != 2)
+            return false;
+        for (char symbol : str.toCharArray())
+            if (!((symbol >= '0' && symbol <= '9') || (symbol >= 'A' && symbol <= 'F')))
+                return false;
+    }
+    return true;   
+}
