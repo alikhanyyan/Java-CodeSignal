@@ -1,0 +1,11 @@
+int solution(int n, int l, int r) 
+{
+    int A = n / 2, B = n / 2 + n % 2, count = 0;
+    while (A >= l && B <= r)
+    {
+        A--;
+        B++;
+        count++;
+    }
+    return count;
+}
