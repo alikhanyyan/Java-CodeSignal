@@ -1,0 +1,9 @@
+String solution(String text) 
+{
+    String[] test = text.split("[^a-zA-Z]");
+    String max = test[0];
+    for (int i = 1; i < test.length; i++)
+        if (test[i].length() > max.length())
+            max = test[i];
+    return max;        
+}
