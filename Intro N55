@@ -1,0 +1,10 @@
+int solution(int[][] matrix) 
+{
+    if (matrix.length < 2 || matrix[0].length < 2) 
+        return 0;
+    HashSet<Integer> smallSquares = new HashSet<Integer>();
+    for (int i = 1; i < matrix.length; i++)
+        for (int j = 1; j < matrix[0].length; j++)
+            smallSquares.add(matrix[i-1][j-1] + matrix[i-1][j] * 10 + matrix[i][j-1] * 100 + matrix[i][j] * 1000);
+    return smallSquares.size();
+}
