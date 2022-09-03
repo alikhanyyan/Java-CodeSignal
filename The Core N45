@@ -1,0 +1,21 @@
+int solution(int a0) 
+{
+    ArrayList<Integer> sequence = new ArrayList<Integer>();
+	int quantity = 1;
+	sequence.add(a0);
+	for (int i = 0; i < quantity; i++)
+	{
+        int number = 0;
+        quantity++;
+		while (a0 > 0)
+		{
+			number += Math.pow(a0 % 10, 2);
+			a0 /= 10;
+		}
+		a0 = number;
+		if (sequence.contains(a0))
+			break;
+		sequence.add(a0);
+	}
+    return quantity;
+}
