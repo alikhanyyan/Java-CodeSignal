@@ -1,0 +1,7 @@
+int[] solution(int[] a, int[] b) 
+{
+    int[] array = Arrays.copyOf(a, a.length + b.length);
+    for (int i = 0; i < b.length; i++)
+        array[i + a.length] = b[i];
+    return array; 
+}
