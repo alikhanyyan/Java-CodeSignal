@@ -1,0 +1,4 @@
+String solution(String startTag) 
+{
+    return "</" + startTag.split("[< >]")[1] + ">";
+}
