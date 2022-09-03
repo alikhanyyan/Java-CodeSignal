@@ -1,4 +1,4 @@
-boolean solution(String str) 
+boolean solution(String inputString) 
 {
-    return str.substring(0, str.length() / 2).equals(str.substring(str.length() / 2));
+    return inputString.substring(0, inputString.length() / 2).equals(inputString.substring(inputString.length() / 2));
 }
