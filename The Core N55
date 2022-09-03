@@ -1,0 +1,4 @@
+String solution(String address) 
+{
+    return address.substring(address.lastIndexOf("@") + 1);
+}
