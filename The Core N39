@@ -1,0 +1,9 @@
+int[] solution(int[] inputArray, int l, int r) 
+{
+    int[] array = new int[inputArray.length - (r - l) - 1];
+    int k = -1;
+    for(int i = 0; i < inputArray.length; i++)
+        if (i < l || i > r)
+            array[++k] = inputArray[i];
+    return array;
+}
